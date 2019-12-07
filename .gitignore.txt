@@ -1,0 +1,78 @@
+Skip to content
+Why GitHub 
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+3.2k55.1k15.2kangularangular
+ Code Issues 2,817 Pull requests 477 Projects 5 Security Insights
+Join GitHub today
+GitHub is home to over 40 million developers working together to host and review code, manage projects, and build software together.
+
+angular.gitignore
+@doom777 doom777 feat add direction property to locale files (#33556)
+3c24384 4 days ago
+@alexeagle@mhevery@gkalpak@IgorMinar@tbosch@vsavkin@petebacondarwin@ocombe@vicb@scheglov@robwormald@rkirov@pkozlowski-opensource@mrmeku@mgechev@kevmoo@jasonaden@jakemac53@gregmagolan@filipesilva@doom777@ayazhafiz
+45 lines (37 sloc)  666 Bytes
+  
+.DS_STORE
+
+dist
+bazel-out
+integrationbazelbazel-
+e2e_test.
+.log
+node_modules
+
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea
+.devcontainer
+!.devcontainerREADME.md
+!.devcontainerrecommended-devcontainer.json
+!.devcontainerrecommended-Dockerfile
+.settings
+.vscodelaunch.json
+.vscodesettings.json
+.vscodetasks.json
+.swo
+modules.settings
+modules.vscode
+.vimrc
+.nvimrc
+
+# Don't check in secret files
+secret.js
+
+# Ignore npmyarn debug log
+npm-debug.log
+yarn-error.log
+
+# build-analytics
+.build-analytics
+
+# rollup-test output
+modulesrollup-testdist
+
+# User specific bazel settings
+.bazelrc.user
+
+.notes.md
+baseline.json
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
