@@ -1,0 +1,17 @@
+<div>
+    <p>Modify product</p>
+    <p>Name</p>
+    <input [(ngModel)]="name" type="text" class="form-control" id="filterInput" placeholder="Name" required>
+    <p>Description</p>
+    <input [(ngModel)]="description" type="text" class="form-control" id="filterInput" placeholder="Description" required>
+    <p>Weight</p>
+    <input [(ngModel)]="weight" type="number" class="form-control" id="filterInput" placeholder="Weight" required>
+    <p>Price</p>
+    <input [(ngModel)]="price" type="number" class="form-control" id="filterInput" placeholder="Price" required>
+    <p>Category</p>
+
+    <select [(ngModel)]="selectedCategory" (ngModelChange)="onChangeObj($event)" class="form-control selcls">
+        <option *ngFor="let c of categories" [ngValue]="c">{{c.name}}</option>
+    </select>
+    <button (click)="confirm()">Confirm</button>
+</div>
