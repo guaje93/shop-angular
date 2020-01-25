@@ -1,0 +1,39 @@
+<div margin="10">
+<h3>Register info</h3>
+<p>User name:</p> 
+<input name="userName_text" [(ngModel)]="userName" type="text" class="form-control" id="filterInput" placeholder="User name" required>
+<p>Email:</p> 
+<input [(ngModel)]="userEmail" type="text" class="form-control" id="filterInput" placeholder="User email" required>
+<p>Phone:</p> 
+<input [(ngModel)]="userPhone" type="text" class="form-control" id="filterInput" placeholder="Phone" required>
+</div>
+<div>
+<h3>Cart Info</h3>
+<table border="1" class="table table-striped table-dark">
+    <tr>
+        <th>Remove</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Quantity change</th>
+        <th>Sub Total</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <td align="center">
+            <button class="btn btn-danger" (click)="remove(item.product._id)">Remove</button>
+        </td>
+        <td>{{item.product.name}}</td>
+        <td>{{item.product.price}}</td>
+        <td>{{item.amount}}</td>
+        <td>
+            <button class="btn btn-success" (click)="changeAmount(item.product._id,1)" >+</button>
+            <button class="btn btn-success" (click)="changeAmount(item.product._id,-1)">-</button>
+        </td>
+        <td>{{item.product.price * item.amount}}</td>
+    </tr>
+    <tr>
+        <td colspan="5" align="right">Total</td>
+        <td>{{total}}</td>
+    </tr>
+</table>
+<button class="btn btn-success" (click)="commitOrder()">Commit order</button>
